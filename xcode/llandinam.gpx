@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx
+xmlns="http://www.topografix.com/GPX/1/1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+version="1.1" 
+creator="gpx-poi.com">
+<!--<wpt lon="-4.065578" lat="52.416339">-->
+    <wpt lon="-4.062578" lat="52.415339">
+      <time>2015-02-02T17:53:40Z</time>
+      <name>Llandinam Building</name>
+   </wpt>
+</gpx>

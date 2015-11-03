@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "2pz-XF-uhl"; */
+"2pz-XF-uhl.text" = "Title";
+
+/* Class = "IBUISegmentedControl"; Ngv-DF-67g.segmentTitles[0] = "Departments"; ObjectID = "Ngv-DF-67g"; */
+"Ngv-DF-67g.segmentTitles[0]" = "Adrannau";
+
+/* Class = "IBUISegmentedControl"; Ngv-DF-67g.segmentTitles[1] = "Buildings"; ObjectID = "Ngv-DF-67g"; */
+"Ngv-DF-67g.segmentTitles[1]" = "Adeiladau";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "pGg-6v-bdr"; */
+"pGg-6v-bdr.title" = "Master";
+
+/* Class = "IBUINavigationController"; title = "Master"; ObjectID = "rS3-R9-Ivy"; */
+"rS3-R9-Ivy.title" = "Master";

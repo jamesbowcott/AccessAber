@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14E11f" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Building" representedClassName="Building" parentEntity="Static" syncable="YES">
+        <attribute name="osmWay" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BuildingGroup" inverseName="buildings" inverseEntity="BuildingGroup" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BuildingInfo" inverseName="building" inverseEntity="BuildingInfo" syncable="YES"/>
+        <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="building" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="BuildingGroup" representedClassName="BuildingGroup" parentEntity="Static" syncable="YES">
+        <relationship name="buildings" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Building" inverseName="group" inverseEntity="Building" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BuildingGroupInfo" inverseName="buildingGroup" inverseEntity="BuildingGroupInfo" syncable="YES"/>
+    </entity>
+    <entity name="BuildingGroupInfo" representedClassName="BuildingGroupInfo" parentEntity="Info" syncable="YES">
+        <relationship name="buildingGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BuildingGroup" inverseName="info" inverseEntity="BuildingGroup" syncable="YES"/>
+    </entity>
+    <entity name="BuildingInfo" representedClassName="BuildingInfo" parentEntity="Info" syncable="YES">
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="info" inverseEntity="Building" syncable="YES"/>
+    </entity>
+    <entity name="Department" representedClassName="Department" parentEntity="Static" syncable="YES">
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentGroup" inverseName="departments" inverseEntity="DepartmentGroup" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentInfo" inverseName="department" inverseEntity="DepartmentInfo" syncable="YES"/>
+        <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Place" inverseName="departments" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="DepartmentGroup" representedClassName="DepartmentGroup" parentEntity="Static" syncable="YES">
+        <relationship name="departments" toMany="YES" deletionRule="Nullify" destinationEntity="Department" inverseName="group" inverseEntity="Department" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentGroupInfo" inverseName="departmentGroup" inverseEntity="DepartmentGroupInfo" syncable="YES"/>
+    </entity>
+    <entity name="DepartmentGroupInfo" representedClassName="DepartmentGroupInfo" parentEntity="Info" syncable="YES">
+        <relationship name="departmentGroup" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentGroup" inverseName="info" inverseEntity="DepartmentGroup" syncable="YES"/>
+    </entity>
+    <entity name="DepartmentInfo" representedClassName="DepartmentInfo" parentEntity="Info" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="info" inverseEntity="Department" syncable="YES"/>
+        <relationship name="url" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MultilingualString" syncable="YES"/>
+    </entity>
+    <entity name="Info" representedClassName="Info" isAbstract="YES" syncable="YES">
+        <relationship name="name" maxCount="1" deletionRule="Nullify" destinationEntity="MultilingualString" syncable="YES"/>
+    </entity>
+    <entity name="MultilingualString" representedClassName="MultilingualString" syncable="YES">
+        <attribute name="base" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="en" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Place" representedClassName="Place" parentEntity="Static" syncable="YES">
+        <attribute name="floor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="places" inverseEntity="Building" syncable="YES"/>
+        <relationship name="departments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Department" inverseName="places" inverseEntity="Department" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="PlaceGroup" inverseName="places" inverseEntity="PlaceGroup" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceInfo" inverseName="place" inverseEntity="PlaceInfo" syncable="YES"/>
+    </entity>
+    <entity name="PlaceGroup" representedClassName="PlaceGroup" parentEntity="Static" syncable="YES">
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceGroupInfo" inverseName="placeGroup" inverseEntity="PlaceGroupInfo" syncable="YES"/>
+        <relationship name="places" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="group" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="PlaceGroupInfo" representedClassName="PlaceGroupInfo" parentEntity="Info" syncable="YES">
+        <relationship name="placeGroup" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceGroup" inverseName="info" inverseEntity="PlaceGroup" syncable="YES"/>
+    </entity>
+    <entity name="PlaceInfo" representedClassName="PlaceInfo" parentEntity="Info" syncable="YES">
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="info" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="Static" representedClassName="Static" isAbstract="YES" syncable="YES">
+        <attribute name="key" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Building" positionX="-9" positionY="450" width="128" height="103"/>
+        <element name="BuildingGroup" positionX="-9" positionY="216" width="128" height="73"/>
+        <element name="BuildingGroupInfo" positionX="-9" positionY="140" width="128" height="58"/>
+        <element name="BuildingInfo" positionX="-9" positionY="374" width="128" height="58"/>
+        <element name="Department" positionX="511" positionY="450" width="128" height="88"/>
+        <element name="DepartmentGroup" positionX="513" positionY="216" width="128" height="73"/>
+        <element name="DepartmentGroupInfo" positionX="513" positionY="140" width="128" height="58"/>
+        <element name="DepartmentInfo" positionX="513" positionY="333" width="128" height="103"/>
+        <element name="Info" positionX="259" positionY="36" width="128" height="58"/>
+        <element name="MultilingualString" positionX="261" positionY="-99" width="128" height="88"/>
+        <element name="Place" positionX="259" positionY="452" width="128" height="148"/>
+        <element name="PlaceGroup" positionX="259" positionY="216" width="128" height="73"/>
+        <element name="PlaceGroupInfo" positionX="259" positionY="140" width="128" height="58"/>
+        <element name="PlaceInfo" positionX="259" positionY="378" width="128" height="58"/>
+        <element name="Static" positionX="259" positionY="599" width="128" height="58"/>
+    </elements>
+</model>

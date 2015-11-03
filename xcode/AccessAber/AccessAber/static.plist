@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DepartmentGroup</key>
+	<dict>
+		<key>Academic</key>
+		<dict>
+			<key>info</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>en</key>
+					<string>Academic</string>
+				</dict>
+			</dict>
+			<key>departments</key>
+			<dict>
+				<key>IBERS</key>
+				<dict>
+					<key>places</key>
+					<dict>
+						<key>IBERS (Penglais)</key>
+						<dict>
+							<key>building</key>
+							<string>IBERS Penglais</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>Computer Science</key>
+				<dict>
+					<key>info</key>
+					<dict>
+						<key>phone</key>
+						<string>01970 000 000</string>
+						<key>url</key>
+						<dict>
+							<key>base</key>
+							<string>cs</string>
+						</dict>
+						<key>email</key>
+						<string>cs@aber.ac.uk</string>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>Computer Science</string>
+						</dict>
+					</dict>
+					<key>places</key>
+					<dict>
+						<key>Department of Computer Science</key>
+						<dict>
+							<key>group</key>
+							<string>DepartmentPlaceGroup</string>
+							<key>info</key>
+							<dict>
+								<key>name</key>
+								<dict>
+									<key>en</key>
+									<string>Department of Computer Science</string>
+								</dict>
+							</dict>
+							<key>building</key>
+							<string>Llandinam Building</string>
+						</dict>
+						<key>Llandinam B23</key>
+						<string></string>
+						<key>Delphinium</key>
+						<string></string>
+						<key>The Orchard</key>
+						<string></string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>BuildingGroup</key>
+	<dict>
+		<key>Penglais</key>
+		<dict>
+			<key>info</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>base</key>
+					<string>Penglais</string>
+				</dict>
+			</dict>
+			<key>buildings</key>
+			<dict>
+				<key>Student Union</key>
+				<dict>
+					<key>osmWay</key>
+					<real>55216079</real>
+				</dict>
+				<key>Arts Centre</key>
+				<dict>
+					<key>info</key>
+					<dict>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>Arts Centre</string>
+						</dict>
+					</dict>
+					<key>osmWay</key>
+					<integer>55215105</integer>
+				</dict>
+				<key>Edward Llwyd Building</key>
+				<dict>
+					<key>info</key>
+					<dict>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>Edward Llwyd Building</string>
+						</dict>
+					</dict>
+					<key>osmWay</key>
+					<integer>55216066</integer>
+				</dict>
+				<key>Physical Sciences Building</key>
+				<dict>
+					<key>info</key>
+					<dict>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>Physical Sciences Building</string>
+						</dict>
+					</dict>
+					<key>osmWay</key>
+					<integer>55216067</integer>
+				</dict>
+				<key>Hugh Owen Building</key>
+				<dict>
+					<key>info</key>
+					<dict>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>Hugh Owen Building</string>
+						</dict>
+					</dict>
+					<key>osmWay</key>
+					<real>55215104</real>
+				</dict>
+				<key>IBERS Penglais</key>
+				<dict>
+					<key>osmWay</key>
+					<real>133626014</real>
+					<key>info</key>
+					<dict>
+						<key>name</key>
+						<dict>
+							<key>base</key>
+							<string>IBERS (Penglais)</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>Llandinam Building</key>
+				<dict>
+					<key>osmWay</key>
+					<integer>55216076</integer>
+					<key>places</key>
+					<dict>
+						<key>ThinkTank</key>
+						<dict>
+							<key>lat</key>
+							<real>52.4167491</real>
+							<key>lon</key>
+							<real>-4.0660441</real>
+							<key>floor</key>
+							<string>B</string>
+							<key>info</key>
+							<dict>
+								<key>name</key>
+								<dict>
+									<key>en</key>
+									<string>ThinkTank</string>
+								</dict>
+							</dict>
+						</dict>
+						<key>The Orchard</key>
+						<dict>
+                            <key>lat</key>
+                            <real>52.4163348</real>
+                            <key>lon</key>
+                            <real>-4.0655394</real>
+							<key>floor</key>
+							<string>B</string>
+							<key>group</key>
+							<string>ComputerRoomPlaceGroup</string>
+							<key>info</key>
+							<dict>
+								<key>name</key>
+								<dict>
+									<key>base</key>
+									<string>The Orchard (B57)</string>
+								</dict>
+							</dict>
+						</dict>
+						<key>Delphinium</key>
+						<dict>
+							<key>lat</key>
+							<real>52.4163348</real>
+							<key>lon</key>
+							<real>-4.0655394</real>
+							<key>floor</key>
+							<string>C</string>
+							<key>group</key>
+							<string>ComputerRoomPlaceGroup</string>
+							<key>info</key>
+							<dict>
+								<key>name</key>
+								<dict>
+									<key>base</key>
+									<string>Delphinium (C57)</string>
+								</dict>
+							</dict>
+						</dict>
+						<key>Llandinam B23</key>
+						<dict>
+							<key>group</key>
+							<string>ComputerRoomPlaceGroup</string>
+							<key>info</key>
+							<dict>
+								<key>name</key>
+								<dict>
+									<key>base</key>
+									<string>B23</string>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>PlaceGroup</key>
+	<dict>
+		<key>ComputerRoomPlaceGroup</key>
+		<dict>
+			<key>info</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>en</key>
+					<string>Computer Room</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>LectureTheatrePlaceGroup</key>
+		<dict>
+			<key>info</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>en</key>
+					<string>Lecture Theatre</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>DepartmentPlaceGroup</key>
+		<dict>
+			<key>info</key>
+			<dict>
+				<key>name</key>
+				<dict>
+					<key>en</key>
+					<string>Department</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
